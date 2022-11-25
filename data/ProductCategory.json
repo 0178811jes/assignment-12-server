@@ -1,0 +1,329 @@
+[
+    {
+      "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
+      
+      "category_id": "01",
+      "price": "$",
+      "img": "https://i.ibb.co/jk1z5pC/pic5.jpg",
+      "orginalPrice":"22000",
+     
+      "resalePrice": "10000",
+      "title": "Walton TV",
+      "date": "16/02/2016"
+    },
+    {
+      "_id": "0282e0e58a5c404fbd15261f11c2ab6b",
+      
+      "category_id": "03",
+      "price": "$",
+      "img": "https://i.ibb.co/5xX2yGJ/pic-4.png",
+      "orginalPrice":"25000",
+     
+      "resalePrice": "15000",
+      "title": "Walton LED",
+      "date": "06/06/2005"
+    },
+
+    {
+      "_id": "f69a695f037cd9484cecaea37ca71011",
+      
+      "category_id": "01",
+      "price": "$",
+      "img": "https://i.ibb.co/5xX2yGJ/pic-4.png",
+      "orginalPrice":"32000",
+     
+      "resalePrice": "20000",
+      "title": "Walton Smart LED",
+      "date": "13/12/2020"
+    },
+    {
+      "_id": "f69a695f037cd9484cecaea37ca71012",
+     
+      "category_id": "02",
+      "price": "$",
+      "img": "https://i.ibb.co/5xX2yGJ/pic-4.png",
+      "orginalPrice":"25000",
+     
+      "resalePrice": "12000",
+      "title": "Walton Coller tv",
+      "date": "30/12/2022"
+    },
+
+    {
+      "_id": "11468ed61aee84de492a8b04158a22f9",
+      
+      "category_id": "03",
+      "price": "$",
+      "img": "https://i.ibb.co/r0pTbg1/pic-3.jpg",
+      "orginalPrice":"15000",
+     
+      "resalePrice": "10000",
+      "title": "Marcel TV",
+      "date": "12/12/2012"
+    },
+    {
+      "_id": "11468ed61aee84de492a8b04158a22f0",
+      
+      "category_id": "01",
+      "price": "$",
+      "img": "https://i.ibb.co/r0pTbg1/pic-3.jpg",
+      "orginalPrice":"26000",
+     
+      "resalePrice": "13000",
+      "title": "Marcel LED",
+      "date": "11/11/2021"
+    },
+
+    {
+      "_id": "2e78e5e0310c2e9adbb6efb1a263e745",
+      
+      "category_id": "02",
+      "price": "$",
+      "img": "https://i.ibb.co/r0pTbg1/pic-3.jpg",
+      "orginalPrice":"",
+     
+      "resalePrice": "",
+      "title": "Marcel Smart LED",
+      "date": "09/10/2010"
+    },
+
+    {
+      "_id": "a713ee936ff5574273f0f769f5c5b20e",
+      
+      "category_id": "03",
+      "price": "$",
+      "img": "https://i.ibb.co/r0pTbg1/pic-3.jpg",
+      "orginalPrice":"16000",
+     
+      "resalePrice": "8000",
+      "title": "Marcel Coller TV",
+      "date": "05/06/2006"
+    },
+
+    {
+      "_id": "e342b6c0c8efc8ca9e811991dc8a7900",
+      
+      "category_id": "04",
+      "price": "$",
+      "img": "https://i.ibb.co/jk1z5pC/pic5.jpg",
+      "orginalPrice":"23000",
+     
+      "resalePrice": "12000",
+      "title": "Vision Smart LED",
+      "date": "03/02/2021"
+    },
+    {
+      "_id": "e342b6c0c8efc8ca9e811991dc8a7901",
+      
+      "category_id": "04",
+      "price": "$",
+      "img": "https://i.ibb.co/jk1z5pC/pic5.jpg",
+      "orginalPrice":"50000",
+     
+      "resalePrice": "20000",
+      "title": "LG TV",
+      "date": "08/04/2016"
+    },
+
+    {
+      "_id": "f06f8cc035b04bd1158e4198281915a3",
+      
+      "category_id": "05",
+      "price": "$",
+      "img": "https://i.ibb.co/jk1z5pC/pic5.jpg",
+      "orginalPrice":"19000",
+     
+      "resalePrice": "10000",
+      "title": "LG Coller TV",
+      "date": "07/07/2011"
+    },
+    {
+      "_id": "f06f8cc035b04bd1158e4198281915a4",
+      
+      "category_id": "05",
+      "price": "$",
+      "img": "https://i.ibb.co/y4xj9TY/pic7.png",
+      "orginalPrice":"21000",
+     
+      "resalePrice": "12000",
+      "title": "LG Smart LED",
+      "date": "08/08/2008"
+    },
+
+    {
+      "_id": "cd2b53655737cc4077542baea9f8f75d",
+      
+      "category_id": "02",
+      "price": "$",
+      "img": "https://i.ibb.co/y4xj9TY/pic7.png",
+      "orginalPrice":"18000",
+     
+      "resalePrice": "15000",
+      "title": "LG LED",
+      "date": "03/03/2003"
+    },
+    {
+      "_id": "4e6092d54c18fbd89ad59e88a1e87fbb",
+     
+      "category_id": "07",
+      "price": "$",
+      "img": "https://i.ibb.co/y4xj9TY/pic7.png",
+      "orginalPrice":"19000",
+     
+      "resalePrice": "10000",
+      "title": "Vision LED",
+      "date": "05/05/2005"
+    },
+    {
+      "_id": "7c4dfea0fafddc813673282a428429b7",
+      
+      "category_id": "01",
+      "price": "$",
+      "img": "https://i.ibb.co/7kJx2VN/pic6.jpg",
+      "orginalPrice":"30000",
+     
+      "resalePrice": "10000",
+      "title": "Vision Coller TV",
+      "date": "09/01/2018"
+    },
+    {
+      "_id": "30af81e91ab3eafc0bcae0de62f55d5c",
+      
+      "category_id": "01",
+      "price": "$",
+      "img": "https://i.ibb.co/7kJx2VN/pic6.jpg",
+      "orginalPrice":"15000",
+     
+      "resalePrice": "9000",
+      "title": "Vision Smart LED",
+      "date": "08/07/2016"
+    },
+    {
+      "_id": "df11ff9feefc37613cc3a4486ce02151",
+      
+      "category_id": "02",
+      "price": "$",
+      "img": "https://i.ibb.co/7kJx2VN/pic6.jpg",
+      "orginalPrice":"23000",
+     
+      "resalePrice": "13000",
+      "title": "Vision LED",
+      "date": "09/08/2007"
+    },
+    {
+      "_id": "919db97c34e0778b387dd40cdfa08130",
+      
+      "category_id": "01",
+      "price": "$",
+      "img": "https://i.ibb.co/FzJ29KH/pic-3.jpg",
+      "orginalPrice":"21000",
+     
+      "resalePrice": "11000",
+      "title": "Vision Coller TV",
+      "date": "06/02/2016"
+    },
+    {
+      "_id": "374df11ae3d9b8b9ce21f4dc53f59b85",
+      
+      "category_id": "01",
+      "price": "$",
+      "img": "https://i.ibb.co/FzJ29KH/pic-3.jpg",
+      "orginalPrice":"45000",
+     
+      "resalePrice": "30000",
+      "title": "Vision Smart LED",
+      "date": "03/01/2012"
+      
+    },
+    {
+      "_id": "acb9b6785b62698fc6130db7615965e1",
+      
+      "category_id": "03",
+      "price": "$",
+      "img": "https://i.ibb.co/FzJ29KH/pic-3.jpg",
+      "orginalPrice":"15000",
+     
+      "resalePrice": "10000",
+      "title": "Walton Coller tv",
+      "date": "04/02/2022"
+    },
+    {
+      "_id": "be44c843d61859cc0b87cae85c55f9db",
+     
+      "category_id": "01",
+      "price": "$",
+      "img": "https://i.ibb.co/59ng9dT/pic-2.webp",
+      "orginalPrice":"20000",
+     
+      "resalePrice": "12000",
+      "title": "Walton Smart LED",
+      "date": "06/01/2019"
+      
+    },
+    {
+      "_id": "1b03149c50f1bec662062d930bf46489",
+     
+      "category_id": "02",
+      "price": "$",
+      "img": "https://i.ibb.co/59ng9dT/pic-2.webp",
+      "orginalPrice":"16000",
+     
+      "resalePrice": "8000",
+      "title": "Marcel Coller TV",
+      "date": "01/05/2011"
+      
+    },
+    {
+      "_id": "7f5b80c1cdd4df0111918883eae07349",
+      
+      "category_id": "03",
+      "price": "$",
+      "img": "https://i.ibb.co/59ng9dT/pic-2.webp",
+      "orginalPrice":"22000",
+     
+      "resalePrice": "12000",
+      "title": "Marcel Smart LED",
+      "date": "06/06/2020"
+     
+    },
+    {
+      "_id": "17d266b79d2fcd850cd4d983c3aeb95f",
+     
+      "category_id": "07",
+      "price": "$",
+      "img": "https://i.ibb.co/WK1GwLm/pic-1.webp",
+      "orginalPrice":"15000",
+     
+      "resalePrice": "10000",
+      "title": "LG Coller TV",
+      "date": "03/03/2011"
+      
+    },
+    {
+      "_id": "61f9ce168f7b15aadecb1d1fc80c72f0",
+      
+      "category_id": "05",
+      "price": "$",
+      "img": "https://i.ibb.co/WK1GwLm/pic-1.webp",
+      "orginalPrice":"25000",
+     
+      "resalePrice": "19000",
+      "title": "LG Smart LED",
+      "date": "02/02/2020"
+      
+      
+    },
+    {
+      "_id": "61f9ce168f7b15aadecb1d1fc80c72f7",
+      "category_id": "04",
+      "price": "$",
+      "img": "https://i.ibb.co/WK1GwLm/pic-1.webp",
+      "orginalPrice":"30000",
+     
+      "resalePrice": "20000",
+      "title": "LG LED",
+      "date": "01/02/2020"
+      
+      
+    }
+  ]
