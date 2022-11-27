@@ -44,6 +44,21 @@ async function run (){
         const usersCollection=client.db('resellProduct').collection('users');
         const productsCollection=client.db('resellProduct').collection('products');
 
+        const verifyAdmin = async(req, res, next) => {
+            console.log('inside verifyadmin', req.decoded.email);
+            const decodedEmail = req.decoded.email;
+
+            const query = {email: decodedEmail};
+            const user = await usersCollection.findOne(query);
+            if(user?.role !== 'admin'){
+                return res.status(403).send({message: 'forbidden access'});
+            }
+            next();
+        }
+
+
+
+
         app.get('/appointmentOptions', async(req, res) => {
             const date=req.query.date;
             console.log(date);
@@ -80,6 +95,16 @@ async function run (){
             const result = await bookingsCollection.insertOne(booking);
             res.send(result);
         });
+
+        //booking id payment
+        app.get('/bookings/:id', async(req, res) => {
+            const id = req.params.id;
+            const query = {_id: ObjectId(id)};
+            const booking = await bookingsCollection.findOne(query);
+            res.send(booking);
+        })
+
+
         //all user data 
         app.get('/users', async(req, res) => {
             const query = {};
@@ -112,7 +137,7 @@ async function run (){
         });
 
         //admin user
-        app.put('/users/admin/:id',verifyJWT,  async(req, res) => {
+        app.put('/users/admin/:id',verifyJWT,verifyAdmin,  async(req, res) => {
             const decodedEmail = req.decoded.email;
 
             const query = {email: decodedEmail};
@@ -148,14 +173,14 @@ async function run (){
             res.send(result);       
         });
         //manage product
-        app.get('/products', async(req, res)=>{
+        app.get('/products',verifyJWT,verifyAdmin, async(req, res)=>{
             const query = {};
             const products = await productsCollection.find(query).toArray();
             res.send(products); 
         });
 
         //manage product delete
-        app.delete('/products/:id', async (req, res)=>{
+        app.delete('/products/:id',verifyJWT,verifyAdmin, async (req, res)=>{
            const id = req.params.id;
            const filter = { _id: ObjectId(id) } ;
            const result = await productsCollection.deleteOne(filter);
@@ -163,7 +188,7 @@ async function run (){
         })
 
 
-        app.post('/products', async (req, res)=>{
+        app.post('/products',verifyJWT,verifyAdmin, async (req, res)=>{
             const product = req.body;
             const result = await productsCollection.insertOne(product);
             res.send(result); 
