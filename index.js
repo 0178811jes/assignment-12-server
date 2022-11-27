@@ -152,7 +152,16 @@ async function run (){
             const query = {};
             const products = await productsCollection.find(query).toArray();
             res.send(products); 
+        });
+
+        //manage product delete
+        app.delete('/products/:id', async (req, res)=>{
+           const id = req.params.id;
+           const filter = { _id: ObjectId(id) } ;
+           const result = await productsCollection.deleteOne(filter);
+           res.send(result);
         })
+
 
         app.post('/products', async (req, res)=>{
             const product = req.body;
