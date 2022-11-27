@@ -42,6 +42,7 @@ async function run (){
         const appointmentOptionCollection=client.db('resellProduct').collection('appointmentOptions');
         const bookingsCollection=client.db('resellProduct').collection('bookings');
         const usersCollection=client.db('resellProduct').collection('users');
+        const productsCollection=client.db('resellProduct').collection('products');
 
         app.get('/appointmentOptions', async(req, res) => {
             const date=req.query.date;
@@ -137,7 +138,26 @@ async function run (){
             const email = req.params.email;
             const query = { email };
             const user = await usersCollection.findOne(query);
-            req.send({isAdmin: user?.role === 'admin'});
+            res.send({isAdmin: user?.role === 'admin'});
+        });
+
+        //admin add special product 
+        app.get('/appointmentSpecialty', async(req, res)=>{
+            const query = {}
+            const result = await appointmentOptionCollection.find(query).project({title:1}).toArray();
+            res.send(result);       
+        });
+        //manage product
+        app.get('/products', async(req, res)=>{
+            const query = {};
+            const products = await productsCollection.find(query).toArray();
+            res.send(products); 
+        })
+
+        app.post('/products', async (req, res)=>{
+            const product = req.body;
+            const result = await productsCollection.insertOne(product);
+            res.send(result); 
         })
 
 
