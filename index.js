@@ -3,6 +3,9 @@ const cors = require('cors');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
+
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
+
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -43,6 +46,7 @@ async function run (){
         const bookingsCollection=client.db('resellProduct').collection('bookings');
         const usersCollection=client.db('resellProduct').collection('users');
         const productsCollection=client.db('resellProduct').collection('products');
+        const paymentsCollection=client.db('resellProduct').collection('payments');
 
         const verifyAdmin = async(req, res, next) => {
             console.log('inside verifyadmin', req.decoded.email);
@@ -123,7 +127,30 @@ async function run (){
             res.status(403).send({accessToken: ''})
         });
 
-        
+        //payment success
+        app.post('/create-payment-intent', async (req, res) => {
+            const booking = req.body;
+            const price = booking.price;
+            const amount = price * 100;
+
+            const paymentIntent = await stripe.paymentIntents.create({
+                currency:'usd',
+                amount: amount,
+                "payment_method_types":[
+                    "card",
+                ]
+            });
+            res.send({
+                clientSecret: paymentIntent.client_secret,
+              });
+        });
+
+        //payments colection
+        app.post('/payments', async (req, res) => {
+           const payment = req.body;
+           const result = await paymentsCollection.insertOne(payment);
+           res.send(result); 
+        })
         
     
 
