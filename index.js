@@ -71,13 +71,15 @@ async function run (){
             res.send(options);
         });
 
-        //category data load
-        // app.get('/appointmentOptions/category/:id', async(req, res)=>{
-        //     const id = req.params.id;
-        //     const query = {_id: ObjectId(id)};
-        //     const category = await appointmentOptionCollection.find(id);
-        //     res.send(category);
-        // })
+        // category data load
+        app.get('/category/:id', async(req, res)=>{
+            const id = req.params.id;
+            
+            const query = {category_id: id};
+            const category = await appointmentOptionCollection.find(query).toArray();
+            console.log(category);
+            res.send(category);
+        })
 
         //bookings get
         app.get('/bookings',verifyJWT, async (req, res) => {
@@ -149,6 +151,15 @@ async function run (){
         app.post('/payments', async (req, res) => {
            const payment = req.body;
            const result = await paymentsCollection.insertOne(payment);
+           const id = payment.bookingId;
+           const filter = {_id: ObjectId(id)};
+           const updatedDoc = {
+                $set:{
+                    paid: true,
+                    transectionId: payment.transectionId
+                }
+           }
+           const resultUpdated = await bookingsCollection.updateOne( filter, updatedDoc);
            res.send(result); 
         })
         
